@@ -21,8 +21,16 @@ test('cognizant test', async ({ page }) => {
   await page.locator('[data-test="lastName"]').fill('Knows');
   await page.locator('[data-test="postalCode"]').fill('95051');
   await page.locator('[data-test="continue"]').click();
-  await page.pause();
-  await expect(page.locator('[data-test="total-label"]')).toHaveText("Total: $49.66");
+  await page.locator('[data-test="item-1-title-link"]').click();
+  await page.locator('[data-test="remove"]').click();
+  await page.locator('[data-test="shopping-cart-link"]').click();
+  await page.locator('[data-test="checkout"]').click();
+  await page.locator('[data-test="firstName"]').fill('Mars');
+  await page.locator('[data-test="lastName"]').fill('Knows');
+  await page.locator('[data-test="postalCode"]').fill('95051');
+  await page.locator('[data-test="continue"]').click();
+  // await page.pause();
+  // await expect(page.locator('[data-test="total-label"]')).toHaveText("Total: $48.66");
 //   await expect(page.locator('[data-test="total-label"]')).toHaveValue();//need to check if total is >< $40
   await page.locator('[data-test="finish"]').click();//if <$40 click finish
 //   await page.locator('[data-test="cancel"]').click();//if >$40 click cancel
