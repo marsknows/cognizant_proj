@@ -8,12 +8,12 @@ And the user navigates to the home page
 And the user clicks the add backpack element
 And the user clicks the add bike light element
 And the user clicks the add t shirt element
-And the the user validates the first element is visible
-And the the user validates the second element is visible
-And the the user validates the third element is visible
-And the the user validates the fourth element is visible
-And the the user validates the fifth element is visible
-And the the user validates the sixth element is visible
+And the the user validates the backpack element is visible
+And the the user validates the bike light element is visible
+And the the user validates the t shirt element is visible
+And the the user validates the jacket element is visible
+And the the user validates the onesie element is visible
+And the the user validates the red shirt element is visible
 And the user clicks the cart element
 And the user navigates to the cart page
 And the user clicks the remove bike element

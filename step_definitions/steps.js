@@ -17,7 +17,12 @@ Given('The user logs in', async function () {
     return 'pending';
   });
 
-  Given('the the user validates the {String} element is visible', function () {
+  Given('the the user validates the {String} element is visible', function (String) {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+  });
+
+  Then('the user navigates to the {String} page', function (String) {
     // Write code here that turns the phrase above into concrete actions
     return 'pending';
   });
