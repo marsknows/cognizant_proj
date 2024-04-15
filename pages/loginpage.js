@@ -4,8 +4,10 @@ class LoginPage
     constructor(page)
     {
         this.page=page
-        this.usernameText= '#user-name'
-        this.passwordText= '#password'
-        this.loginButton= '#login-button'
+        this.username_textbox= page.locator('[data-test="username"]')
+        this.password_textbox= page.locator('[data-test="password"]')
+        this.login_button= page.locator('[data-test="login-button"]')
     }
 }
+
+module.exports=LoginPage;
