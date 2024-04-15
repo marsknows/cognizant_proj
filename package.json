@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@cucumber/cucumber": "^10.4.0",
     "@playwright/test": "^1.43.0",
     "@types/node": "^20.12.7",
     "allure-commandline": "^2.28.0",
