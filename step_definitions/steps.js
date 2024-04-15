@@ -1,0 +1,23 @@
+const {Given,When,Then}= require('@cucumber/cucumber')
+
+Given('The user logs in', async function () {
+    await page.goto('https://www.saucedemo.com/');
+    await page.locator('[data-test="username"]').fill('standard_user');
+    await page.locator('[data-test="password"]').fill('secret_sauce');
+    await page.locator('[data-test="login-button"]').click();
+  });
+
+  Given('the user clicks the {string} element', function (String) {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+  });
+
+  Given('the user fills the page with', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+  });
+
+  Given('the the user validates the element is visible', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return 'pending';
+  });
