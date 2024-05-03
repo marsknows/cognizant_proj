@@ -1,6 +1,6 @@
-const {Given,When,Then}= require('@cucumber/cucumber')
+const {Given,When,Then}= require ('@cucumber/cucumber')
 
-Given('The user logs in', async function () {
+Given('The user logs in', async ({page}) => {
     await page.goto('https://www.saucedemo.com/');
     await page.locator('[data-test="username"]').fill('standard_user');
     await page.locator('[data-test="password"]').fill('secret_sauce');
