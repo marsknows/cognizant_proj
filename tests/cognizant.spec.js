@@ -34,7 +34,7 @@ test('cognizant test', async ({ page }) => {
 //   await expect(page.locator('[data-test="total-label"]')).toHaveValue();//need to check if total is >< $40
   await page.locator('[data-test="finish"]').click();//if <$40 click finish
 //   await page.locator('[data-test="cancel"]').click();//if >$40 click cancel
-  await expect(page.locator('[data-test="complete-header"]')).isVisible();
+  await expect(page.locator('[data-test="complete-header"]')).toBeVisible();
   await page.locator('[data-test="back-to-products"]').click();
   await page.getByRole('button', { name: 'Open Menu' }).click();
   await page.locator('[data-test="logout-sidebar-link"]').click();
