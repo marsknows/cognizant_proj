@@ -1,11 +1,23 @@
 const {Given,When,Then}= require ('@cucumber/cucumber')
 const { expect } = require('@playwright/test');
+const {LoginPage}= require("../pages/loginPage");
+let loginPage;
 
-Given('The user logs in', async ({page}) => {
-    await page.goto('https://www.saucedemo.com/');
+Given('The user logs in', async function() {
+    loginPage = new LoginPage(this.page);
+    await loginPage.goToUrl();
     await page.locator('[data-test="username"]').fill('standard_user');
     await page.locator('[data-test="password"]').fill('secret_sauce');
     await page.locator('[data-test="login-button"]').click();
+  });
+
+  When('the user enters the username and password', async function() {
+    await loginPage.enterUsername();
+    await loginPage.enterPassword();
+  });
+
+  When('the user clicks the login element', async function() {
+    await loginPage.clickLogin();
   });
 
   When('the user clicks the add backpack element', async ({page}) => {

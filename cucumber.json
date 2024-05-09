@@ -1,0 +1,12 @@
+{
+    "default": {
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "paths": ["./features/*.feature"],
+        "require": ["./stepDefinitions/*.js", "./pages/*.js", "./hooks/*.js"],
+        "cucumber": "cucumber.js ../../features/*.feature -r ../../../stepDefinitions/*.js",
+        "publishQuiet": true,
+        "dryRun": false
+    }
+}
